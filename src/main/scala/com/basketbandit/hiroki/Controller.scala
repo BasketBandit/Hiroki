@@ -6,4 +6,7 @@ class Controller(a: Int, b: Int, c: String) extends ArithmeticFunctions with Str
   println(square(a))
   println(root(b))
   println(reverse(c))
+
+  println(new SuperStringBuilder().append("a").prepend("b", 10).toString)
+
 }

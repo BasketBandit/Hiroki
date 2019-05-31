@@ -12,4 +12,8 @@ trait StringFunctions {
 
     s
   }
+
+  def prepend(string: String, x: String): String = x + string
+
+  def append(string: String, x: String): String = string + x
 }
