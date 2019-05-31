@@ -1,19 +1,43 @@
 package com.basketbandit.hiroki.functions
 
-trait StringFunctions {
+trait StringFunctions extends Validator {
 
-  def reverse(x: String): String = {
+  def reverse(string: String): String = {
     var s = ""
-    val chars = x.split("").reverse
+    val chars = string.split("").reverse
 
-    for(a <- chars) {
-      s+=a
+    for(x <- chars) {
+      s = s"$s$x"
     }
 
     s
   }
 
-  def prepend(string: String, x: String): String = x + string
+  def formatNumber(in: Int): String = formatNumber(in+"")
 
-  def append(string: String, x: String): String = string + x
+  def formatNumber(in: String): String = {
+    if(!isNumber(in)) {
+      return "NaN"
+    }
+
+    var s = ""
+    val chars = in.toCharArray
+
+    for(x <- 0 until chars.length) {
+      if((chars.length - x) % 3 == 0 && x != 0) {
+        s += ","
+      }
+      s += chars(x)
+    }
+
+    s
+  }
+
+  def prepend(string: String, x: String): String = s"$x$string"
+
+  def append(string: String, x: String): String = s"$string$x"
+
+  def encase(string: String, x: String): String = s"$x$string$x"
+
+
 }

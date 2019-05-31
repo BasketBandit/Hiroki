@@ -33,5 +33,19 @@ class SuperStringBuilder extends StringFunctions {
     this
   }
 
+  // Encases the given string with `in`
+  def encase(in: String): SuperStringBuilder = {
+    this.string = encase(this.string, in)
+    this
+  }
+
+  // Encases the given string with `in`, `count` amount of times
+  def encase(in: String, count: Int): SuperStringBuilder = {
+    for(_ <- 1 to count) {
+      this.string = encase(this.string, in)
+    }
+    this
+  }
+
   override def toString: String = this.string
 }

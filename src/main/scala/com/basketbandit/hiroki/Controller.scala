@@ -1,12 +1,6 @@
 package com.basketbandit.hiroki
 
-import com.basketbandit.hiroki.functions.{ArithmeticFunctions, StringFunctions}
+import com.basketbandit.hiroki.functions.{ArithmeticFunctions, Validator, StringFunctions}
 
-class Controller(a: Int, b: Int, c: String) extends ArithmeticFunctions with StringFunctions {
-  println(square(a))
-  println(root(b))
-  println(reverse(c))
-
-  println(new SuperStringBuilder().append("a").prepend("b", 10).toString)
-
+class Controller() extends ArithmeticFunctions with StringFunctions with Validator {
 }
