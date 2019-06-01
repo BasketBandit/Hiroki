@@ -1,4 +1,4 @@
-package com.basketbandit.hiroki.functions
+package com.basketbandit.hiroki.traits
 
 trait ArithmeticFunctions {
 

@@ -1,4 +1,4 @@
-package com.basketbandit.hiroki.functions
+package com.basketbandit.hiroki.traits
 
 trait StringFunctions extends Validator {
 
@@ -38,6 +38,5 @@ trait StringFunctions extends Validator {
   def append(string: String, x: String): String = s"$string$x"
 
   def encase(string: String, x: String): String = s"$x$string$x"
-
 
 }

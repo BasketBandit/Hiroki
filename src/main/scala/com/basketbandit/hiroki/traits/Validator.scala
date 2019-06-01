@@ -1,4 +1,4 @@
-package com.basketbandit.hiroki.functions
+package com.basketbandit.hiroki.traits
 
 trait Validator {
 
@@ -6,11 +6,11 @@ trait Validator {
     if(in.length < 1) {
       return false
     }
-    
+
     for(x <- in.toStream; if !Character.isDigit(x)) {
       return false
     }
-    
+
     true
   }
 
