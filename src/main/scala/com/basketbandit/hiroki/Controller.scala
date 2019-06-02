@@ -1,8 +1,7 @@
 package com.basketbandit.hiroki
 
-import com.basketbandit.hiroki.traits.{ArithmeticFunctions, Validator, StringFunctions}
+import com.basketbandit.hiroki.traits.{ArithmeticFunctions, StringFunctions, Validator}
 
 class Controller() extends ArithmeticFunctions with StringFunctions with Validator {
-  println(formatNumber(1000000))
-  println(new SuperStringBuilder().append("o", 5).encase("A"))
+  println(new OkHttpRequestHandler("https://nekos.life/api/v2/img/lewd").string)
 }
